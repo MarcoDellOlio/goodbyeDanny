@@ -33,6 +33,7 @@
     "mongoose": "^5.0.0",
     "react-animate-on-scroll": "^1.6.0",
     "react-animations": "^1.0.0",
+    "react-icons": "^2.2.7",
     "react-player": "^1.1.1",
     "styled-components": "^2.4.0",
     "styled-flex-component": "^2.1.0"

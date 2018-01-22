@@ -3,9 +3,14 @@ import PictureContainer from './PictureContainer'
 import Flex from 'styled-flex-component';
 import styled , { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations'
+import { pulse } from 'react-animations'
 import ReactPlayer from 'react-player'
+import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const fadeInAnimation = keyframes`${fadeIn}`
+const pulseAnimation = keyframes`${pulse}`
 
 const Wrapper = styled.div `
   height : 100%;
@@ -26,7 +31,7 @@ const PolaroidContainer = styled.div`
     margin: 0 25px 80px;
     padding: 10px 20px 25px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none; 
     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
     -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
     box-shadow: 0 4px 6px rgba(0,0,0,.3);
@@ -45,20 +50,21 @@ const PolaroidContainer = styled.div`
 
       const Polaroid1 = PolaroidContainer.extend `
         transform: rotate(5deg);
-        animation: 6s ${fadeInAnimation};
-        
-      
+        animation: 5s ${fadeInAnimation};
       `
       const Polaroid2 = PolaroidContainer.extend `
         transform: rotate(-5deg);
-        animation: 9s ${fadeInAnimation};
-
+        animation: 15s ${fadeInAnimation};
       `
       const Polaroid3 = PolaroidContainer.extend `
         transform: rotate(-2deg);
-        animation: 12s ${fadeInAnimation};      
+        animation: 20s ${fadeInAnimation};
       `
-  
+      const Arrow = styled.div`
+        width: 100px;
+        animation: ${fadeInAnimation} 8s, ${pulseAnimation} 1s infinite;
+        
+      `
 
 
 class Home extends Component {
@@ -80,6 +86,9 @@ class Home extends Component {
             <Polaroid1 ><Media><img width="100%" height="100%" src="https://i.imgur.com/XfDgZ7p.png" alt=""/></Media><Name>GOOD</Name></Polaroid1>
             <Polaroid2 ><Media><img width="100%" height="100%" src="https://i.imgur.com/QlwwJiS.png" alt=""/></Media><Name>BYE</Name></Polaroid2>
             <Polaroid3><Media><img width="100%" height="100%" src="https://i.imgur.com/Nc9wK1D.png" alt=""/></Media><Name>DANNY!</Name></Polaroid3>
+            <ScrollAnimation offset="1" animateOut="fadeOut" initiallyVisible="false">
+              <Arrow><FaAngleDoubleDown size={40} /></Arrow>
+            </ScrollAnimation>
           </Landscape>
           <PictureContainer setVolumeDown={this.setVolumeDown} setVolumeUp={this.setVolumeUp} />
         </Wrapper>

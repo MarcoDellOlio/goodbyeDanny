@@ -30,7 +30,7 @@ class PictureContainer extends Component {
             },
             {
                 name: "Fahad",
-                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
+                picture: "https://i.imgur.com/gGHX9U6.jpg",
                 video: "https://youtube.com/embed/9yWpFGaBYyE",
                 show : "picture"
             },
@@ -60,8 +60,8 @@ class PictureContainer extends Component {
             },
             {
                 name: "Ninti",
-                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
-                video: "https://www.youtube.com/embed/XxRgPNsp928",
+                picture: "https://i.imgur.com/QKCVUFz.jpg?3",
+                video: "https://youtube.com/embed/xCBN0689-G4",
                 show : "picture"
             },
             {
@@ -72,12 +72,12 @@ class PictureContainer extends Component {
             },
             {
                 name: "Ayana",
-                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
+                picture: "https://i.imgur.com/IoBuxnX.png",
                 video: "https://youtube.com/embed/9AxfGUh-q1o",
                 show : "picture"
             },
             {
-                name: "Suprya",
+                name: "Supriya",
                 picture: "https://i.imgur.com/BrwPBpf.jpg",
                 video: "https://youtube.com/embed/hYZrh0ENMyQ",
                 show : "picture"
@@ -86,6 +86,42 @@ class PictureContainer extends Component {
                 name: "Eric",
                 picture: "https://i.imgur.com/LrUl1HY.png",
                 video: "https://youtube.com/embed/hxrcoYC1Osw",
+                show : "picture"
+            },
+            {
+                name: "Tony",
+                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
+                video: "https://youtube.com/embed/UKtp_jy8RkU",
+                show : "picture"
+            },
+            {
+                name: "Jonathan",
+                picture: "https://i.imgur.com/cW3stov.jpg",
+                video: "",
+                show : "picture"
+            },
+            {
+                name: "Jasen",
+                picture: "https://i.imgur.com/6pTp9Tz.jpg",
+                video: "https://youtube.com/embed/6rqh3Oq1UIo",
+                show : "picture"
+            },
+            {
+                name: "Christopher",
+                picture: "https://i.imgur.com/XT6bwJI.jpg?1",
+                video: "",
+                show : "picture"
+            }, 
+            {
+                name: "Diane",
+                picture: "https://i.imgur.com/kXz8Z4p.png",
+                video: "https://youtube.com/embed/poJPa6mo1I4",
+                show : "picture"
+            },
+            {
+                name: "Tommy",
+                picture: "http://www.indiewire.com/wp-content/uploads/2017/05/tommy-wiseau.jpg",
+                video: "https://youtube.com/embed/pdPSHEGCszo",
                 show : "picture"
             },
         ]
