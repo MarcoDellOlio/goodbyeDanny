@@ -9,52 +9,83 @@ class PictureContainer extends Component {
     
     state = {
         students: [
-            {
-                name: "marco",
-                picture: "https://i.imgur.com/V8Jxe3D.jpg",
-                video: "https://www.youtube.com/embed/nWZMfPP34g8",
-                show : "picture"
-            },
+           
             {
                 name: "tyler",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
                 video: "https://www.youtube.com/embed/nWZMfPP34g8",
                 show : "picture"
             },
             {
                 name: "Bethany",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://i.imgur.com/1ruSz1K.jpg",
                 video: "https://www.youtube.com/embed/3bj--7Zicng",
                 show : "picture"
             },
             {
                 name: "Josh",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://i.imgur.com/B0KOrC1.jpg",
                 video: "https://www.youtube.com/embed/X6BYFkBUNYQ",
                 show : "picture"
             },
             {
                 name: "Fahad",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
                 video: "https://youtube.com/embed/9yWpFGaBYyE",
                 show : "picture"
             },
             {
                 name: "Olee",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/533614_4208729453382_30488421_n.jpg?oh=cf0d398ada7a83c08d38afe41e610803&oe=5AFB97AF",
                 video: "https://youtube.com/embed/ity5I6gmA8E",
                 show : "picture"
             },
             {
                 name: "Jackson",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://i.imgur.com/CsN4gur.jpg",
                 video: "https://www.youtube.com/embed/3QeR6Dn9uJM",
                 show : "picture"
             },
             {
                 name: "Jean",
-                picture: "https://i.pinimg.com/736x/69/90/0e/69900e95e2d9e2ca0956a126155bbc31--photography-people-portrait-faces-photography.jpg",
+                picture: "https://i.imgur.com/PoTSPmN.jpg",
                 video: "https://www.youtube.com/embed/XxRgPNsp928",
+                show : "picture"
+            },
+            {
+                name: "marco",
+                picture: "https://i.imgur.com/V8Jxe3D.jpg",
+                video: "https://youtube.com/embed/fFlPKzt35Oo",
+                show : "picture"
+            },
+            {
+                name: "Ninti",
+                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
+                video: "https://www.youtube.com/embed/XxRgPNsp928",
+                show : "picture"
+            },
+            {
+                name: "Phil",
+                picture: "https://i.imgur.com/UGw72vW.jpg",
+                video: "https://youtube.com/embed/tgohzlUdT24",
+                show : "picture"
+            },
+            {
+                name: "Ayana",
+                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
+                video: "https://youtube.com/embed/9AxfGUh-q1o",
+                show : "picture"
+            },
+            {
+                name: "Suprya",
+                picture: "https://i.imgur.com/BrwPBpf.jpg",
+                video: "https://youtube.com/embed/hYZrh0ENMyQ",
+                show : "picture"
+            },
+            {
+                name: "Eric",
+                picture: "https://i.imgur.com/LrUl1HY.png",
+                video: "https://youtube.com/embed/hxrcoYC1Osw",
                 show : "picture"
             },
         ]
@@ -72,9 +103,8 @@ showVideo = (index) => {
         const students = [...this.state.students]
         students.forEach((student)=>{student.show = "picture"})
         students[index].show = "video"
-        console.log(students)
         this.setState({students})
-       
+        this.props.setVolumeDown()
     }
 
     else {
@@ -82,12 +112,13 @@ showVideo = (index) => {
         students[index].show = "picture"
         console.log(students)
         this.setState({students})
+        this.props.setVolumeUp()
     }
 }
     
 
   render() {
-
+    
     const pulseAnimation = keyframes`${pulse}`
 
     const PolaroidContainer = styled.div`
@@ -108,6 +139,7 @@ showVideo = (index) => {
     &:active{
         animation: 1s ${pulseAnimation}; 
     }
+    transform: rotate(${Math.floor(Math.random() * 6) + 1});
     `
     const Media = styled.div ` 
     height:370px;
