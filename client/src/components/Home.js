@@ -26,7 +26,7 @@ const PolaroidContainer = styled.div`
     display: inline-block;
     position : relative;
     background: white;
-    width : 25vw;
+    width : 24vw;
     height: auto;
     margin: 0 25px 80px;
     padding: 10px 20px 25px;
@@ -61,7 +61,7 @@ const PolaroidContainer = styled.div`
         animation: 20s ${fadeInAnimation};
       `
       const Arrow = styled.div`
-        width: 100px;
+        width: 150px;
         animation: ${fadeInAnimation} 8s, ${pulseAnimation} 1s infinite;
         
       `
@@ -87,8 +87,8 @@ class Home extends Component {
             <Polaroid2 ><Media><img width="100%" height="100%" src="https://i.imgur.com/QlwwJiS.png" alt=""/></Media><Name>BYE</Name></Polaroid2>
             <Polaroid3><Media><img width="100%" height="100%" src="https://i.imgur.com/Nc9wK1D.png" alt=""/></Media><Name>DANNY!</Name></Polaroid3>
             <ScrollAnimation offset="1" animateOut="fadeOut" initiallyVisible="false">
-              <Arrow><FaAngleDoubleDown size={40} /></Arrow>
-            </ScrollAnimation>
+              <Arrow><FaAngleDoubleDown size={50} /></Arrow>
+            </ScrollAnimation >
           </Landscape>
           <PictureContainer setVolumeDown={this.setVolumeDown} setVolumeUp={this.setVolumeUp} />
         </Wrapper>

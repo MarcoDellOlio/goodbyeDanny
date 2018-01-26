@@ -12,8 +12,8 @@ class PictureContainer extends Component {
            
             {
                 name: "tyler",
-                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
-                video: "https://www.youtube.com/embed/nWZMfPP34g8",
+                picture: "https://i.imgur.com/NKHtqe8.jpg",
+                video: "https://youtube.com/embed/6Uat0aTQY1I",
                 show : "picture"
             },
             {
@@ -90,14 +90,14 @@ class PictureContainer extends Component {
             },
             {
                 name: "Tony",
-                picture: "https://i.pinimg.com/originals/06/c0/c5/06c0c5ce9685c8f8176bd87b5ab1027e.jpg",
+                picture: "https://i.imgur.com/syPfOEI.jpg",
                 video: "https://youtube.com/embed/UKtp_jy8RkU",
                 show : "picture"
             },
             {
                 name: "Jonathan",
                 picture: "https://i.imgur.com/cW3stov.jpg",
-                video: "",
+                video: "https://youtube.com/embed/NBIH3ZMghuI",
                 show : "picture"
             },
             {
@@ -109,13 +109,31 @@ class PictureContainer extends Component {
             {
                 name: "Christopher",
                 picture: "https://i.imgur.com/XT6bwJI.jpg?1",
-                video: "",
+                video: "https://youtube.com/embed/VDpL8CsBgww",
                 show : "picture"
             }, 
             {
                 name: "Diane",
                 picture: "https://i.imgur.com/kXz8Z4p.png",
                 video: "https://youtube.com/embed/poJPa6mo1I4",
+                show : "picture"
+            },
+            {
+                name: "Jeremy",
+                picture: "https://i.imgur.com/qJFXu7j.jpg",
+                video: "https://youtube.com/embed/LctqSj7dJtc",
+                show : "picture"
+            },
+            {
+                name: "Jamie",
+                picture: "https://i.imgur.com/UJyRR0Q.jpg",
+                video: "https://youtube.com/embed/jmVkc0VNNFk",
+                show : "picture"
+            },
+            {
+                name: "Daniel",
+                picture: "https://i.imgur.com/O6AAjar.jpg",
+                video: "https://youtube.com/embed/g1fvb3Y7soM",
                 show : "picture"
             },
             {
@@ -158,24 +176,24 @@ showVideo = (index) => {
     const pulseAnimation = keyframes`${pulse}`
 
     const PolaroidContainer = styled.div`
-    background: white;
-    width : 25vw;
-    height: auto;
-    margin: 0 25px 80px;
-    padding: 10px 20px 25px;
-    text-align: center;
-    text-decoration: none;
-    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
-    box-shadow: 0 4px 6px rgba(0,0,0,.3);
-    -webkit-transition: all .15s linear;
-    -moz-transition: all .15s linear;
-    transition: all .15s linear;
-    z-index:0;
-    &:active{
+        background: white;
+        width : 25vw;
+        height: auto;
+        margin: 0 25px 80px;
+        padding: 10px 20px 25px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+        -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+        box-shadow: 0 4px 6px rgba(0,0,0,.3);
+        -webkit-transition: all .15s linear;
+        -moz-transition: all .15s linear;
+        transition: all .15s linear;
+        z-index:0;
+        &:active{
         animation: 1s ${pulseAnimation}; 
-    }
-    transform: rotate(${Math.floor(Math.random() * 6) + 1});
+        }
+        transform: rotate(${Math.floor(Math.random() * 6) + 1});
     `
     const Media = styled.div ` 
     height:370px;
@@ -196,7 +214,7 @@ showVideo = (index) => {
 
     const polaroid = this.state.students.map((student, index) => {
         return (  
-            <ScrollAnimation key={index} animateIn="fadeIn">  
+        <ScrollAnimation key={index} animateIn="fadeIn">  
                 <PolaroidContainer  onClick={(event) => this.handleCLick(index, event)}>
                     <Media>{display(student,index)}</Media>
                     <Name >{student.name}</Name>
