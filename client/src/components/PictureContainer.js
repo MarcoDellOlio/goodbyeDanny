@@ -121,7 +121,7 @@ class PictureContainer extends Component {
             {
                 name: "Jeremy",
                 picture: "https://i.imgur.com/qJFXu7j.jpg",
-                video: "https://youtube.com/embed/AwEAy6Z0sDI",
+                video: "https://youtube.com/embed/LatxPq_JKRc",
                 show : "picture"
             },
             {
